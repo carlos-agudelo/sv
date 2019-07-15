@@ -91,7 +91,7 @@ gulp.task('sass', () => {
 
 //Server
 gulp.task('server', () => {
-    gulp.src('app')
+    gulp.src('./')
         .pipe(server({
             port: 8000,
             livereload: true,
