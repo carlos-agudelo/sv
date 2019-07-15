@@ -10,19 +10,18 @@ const   gulp = require('gulp'),
         server = require('gulp-server-livereload'),
         gcmq = require('gulp-group-css-media-queries');
 
-const path = {
-    css: [
-        'app/css/vendors/owl.carousel.min.css',
-        'app/css/vendors/owl.theme.default.min.css',
-    ],
-    js: [
-        'app/js/vendors/bootstrap.min.js',
-        'app/js/vendors/owl.carousel.min.js',
-    ]
-};
+// const path = {
+//     css: [
+//         'app/css/vendors/owl.carousel.min.css',
+//         'app/css/vendors/owl.theme.default.min.css',
+//     ],
+//     js: [
+//         'app/js/vendors/bootstrap.min.js',
+//         'app/js/vendors/owl.carousel.min.js',
+//     ]
+// };
 const path_dest = {
-    css: 'app/css/public',
-    js: 'app/js/public'
+    css: 'css'
 };
 
 function concat_files(srcObj, nameFile, cb){
@@ -38,7 +37,7 @@ function concat_files(srcObj, nameFile, cb){
 
 //Sass
 gulp.task('sass', () => {
-    gulp.src('app/css/src/*.scss')
+    gulp.src('scss/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
             outputStyle: 'expanded'
@@ -51,37 +50,37 @@ gulp.task('sass', () => {
 });
 
 //Js compress
-gulp.task('js_task', (cb) => {
-    pump([
-        gulp.src('app/js/src/*.js').pipe(babel({
-            presets: ['env']
-        })),
-        uglify(),
-        gulp.dest(path_dest.js)
-    ],
-        cb
-    );
-});
+// gulp.task('js_task', (cb) => {
+//     pump([
+//         gulp.src('app/js/src/*.js').pipe(babel({
+//             presets: ['env']
+//         })),
+//         uglify(),
+//         gulp.dest(path_dest.js)
+//     ],
+//         cb
+//     );
+// });
 
 //Css vendors
-gulp.task('css_vendor', () => {
-    gulp.src(path.css)
-        .pipe(concat('vendor.min.css'))
-        .pipe(minifyCSS())
-        .pipe(gulp.dest(path_dest.css));
-});
+// gulp.task('css_vendor', () => {
+//     gulp.src(path.css)
+//         .pipe(concat('vendor.min.css'))
+//         .pipe(minifyCSS())
+//         .pipe(gulp.dest(path_dest.css));
+// });
 
 //Js vendors
-gulp.task('js_vendor', (cb) => {
-    pump([
-        gulp.src(path.js),
-        concat('vendor.min.js'),
-        uglify(),
-        gulp.dest(path_dest.js)
-    ],
-        cb
-    );
-});
+// gulp.task('js_vendor', (cb) => {
+//     pump([
+//         gulp.src(path.js),
+//         concat('vendor.min.js'),
+//         uglify(),
+//         gulp.dest(path_dest.js)
+//     ],
+//         cb
+//     );
+// });
 
 //Babel
 // gulp.task('babel_task', () => {
@@ -102,9 +101,9 @@ gulp.task('server', () => {
 
 //Default
 gulp.task('default', ["server"], () => {
-    gulp.watch('app/css/src/*.scss', ['sass']);
-    gulp.watch('app/css/vendors/*.css', ['css_vendor']);
+    gulp.watch('scss/*.scss', ['sass']);
+    // gulp.watch('app/css/vendors/*.css', ['css_vendor']);
     //gulp.watch('app/js/src/*.js', ['babel_task']);
-    gulp.watch('app/js/src/*.js', ['js_task']);
-    gulp.watch('app/js/vendors/*.js', ['js_vendor']);
+    // gulp.watch('js/*.js', ['js_task']);
+    // gulp.watch('app/js/vendors/*.js', ['js_vendor']);
 });
