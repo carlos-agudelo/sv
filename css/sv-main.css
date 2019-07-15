@@ -1,0 +1,607 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700");
+html, body {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fff;
+  color: #3d3d3d;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+a:hover {
+  color: currentColor;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: transparent;
+}
+
+.mg-top-20 {
+  margin-top: 20px;
+}
+
+.mg-top-30 {
+  margin-top: 30px;
+}
+
+.mg-top-40 {
+  margin-top: 40px;
+}
+
+.mg-btm-10 {
+  margin-bottom: 10px;
+}
+
+.mg-btm-20 {
+  margin-bottom: 20px;
+}
+
+.mg-btm-30 {
+  margin-bottom: 30px;
+}
+
+.mg-btm-40 {
+  margin-bottom: 40px;
+}
+
+.mg-btm-50 {
+  margin-bottom: 50px;
+}
+
+.mg-btm-60 {
+  margin-bottom: 60px;
+}
+
+.mg-btm-70 {
+  margin-bottom: 70px;
+}
+
+.mg-btm-100 {
+  margin-bottom: 100px;
+}
+
+.pad-01 {
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.pad-y-70 {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.pad-y-90 {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.pad-y-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.pl-6 {
+  padding-left: 4.5rem;
+}
+
+.t-thin {
+  font-weight: 100;
+}
+
+.t-light {
+  font-weight: 300;
+}
+
+.t-bold {
+  font-weight: 700;
+}
+
+.t-italic {
+  font-style: italic;
+}
+
+.f-light {
+  font-weight: 300;
+}
+
+.t-transform {
+  text-transform: uppercase;
+}
+
+.img_fit {
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+}
+
+.accordion {
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.accordion .title_sub:before {
+  content: "";
+  position: absolute;
+  background-image: url(/icons/sort-down-solid.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 1.4rem 1.4rem;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  top: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  left: 1rem;
+  bottom: 0;
+  margin: auto;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.accordion .title--t {
+  position: relative;
+}
+
+.accordion .title--t:before {
+  content: "";
+  position: absolute;
+  background-image: url(/icons/sort-down-solid-b.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 1.4rem 1.4rem;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  top: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  left: -2rem;
+  bottom: 0;
+  margin: auto;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.accordion.active .title_sub:before {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.accordion.active .title--t:before {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.sec_titles > .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sec_info {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+.sec_info--t {
+  max-height: auto;
+}
+
+.sec_info .row {
+  margin-bottom: 3rem;
+}
+
+.sec_info--t .row {
+  margin-bottom: 3rem;
+}
+
+.col_left {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+
+.col_right {
+  z-index: 1;
+  width: 56%;
+  position: absolute;
+  right: 0;
+  padding-right: 2rem;
+}
+
+.p_sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: #fff;
+}
+
+.p_sticky.scroll-down {
+  padding: 15px 0;
+}
+
+.place p {
+  margin-bottom: 0;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+.place p strong {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.place_coach {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.place_desc {
+  font-size: 1.1rem;
+  display: block;
+  font-family: "Roboto", sans-serif;
+}
+
+.two .col_left {
+  width: 60%;
+}
+
+.two .col_right {
+  width: 45%;
+}
+
+.two--t .col_left {
+  width: 40%;
+}
+
+.two--t .col_right {
+  width: 60%;
+}
+
+.four .col_left,
+.nine .col_left {
+  width: 60%;
+}
+
+.four .col_right,
+.nine .col_right {
+  width: 42%;
+}
+
+.five .col_left {
+  width: 55%;
+}
+
+.five .col_right {
+  width: 52%;
+}
+
+.six .col_left {
+  width: 54%;
+}
+
+.six .col_right {
+  width: 46%;
+}
+
+.break .col_left {
+  width: 40%;
+}
+
+.break .col_right {
+  width: 60%;
+}
+
+.break .title {
+  font-size: 2rem;
+}
+
+.eight .col_left {
+  width: 62%;
+}
+
+.eight .col_right {
+  width: 39%;
+}
+
+.header {
+  position: relative;
+  background-image: url(/images/bg-header-ibm.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 30rem;
+}
+
+.header_logos {
+  position: absolute;
+  bottom: 6rem;
+  left: 5rem;
+  right: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header_info span {
+  color: black;
+  font-size: 1.9rem;
+  display: block;
+  line-height: 1;
+}
+
+.header_title {
+  margin: 0;
+  font-size: 2.4rem;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+.logo_ibm {
+  position: absolute;
+  top: 2rem;
+  max-width: 13%;
+}
+
+@media (min-width: 768px) {
+  .logo_ibm {
+    max-width: 4%;
+  }
+}
+
+.logo_think {
+  margin: 0;
+  position: relative;
+  left: 2rem;
+  line-height: 1;
+}
+
+.logo_think span {
+  font-family: "Roboto", sans-serif;
+  display: block;
+  font-size: 2.4rem;
+  color: black;
+  margin-top: 1rem;
+}
+
+.copy {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  width: 100%;
+}
+
+.footer {
+  top: 1rem;
+  position: relative;
+}
+
+.footer_img {
+  background-image: url(/images/bg-footer-ibm.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-position: 86% 0;
+  background-position: center 0;
+  min-height: 48rem;
+}
+
+.title {
+  color: #0062ff;
+  font-size: 2.9rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  padding: 0.8rem 0;
+}
+
+.title--t {
+  font-size: 2rem;
+}
+
+.title_sub {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  padding-left: 3rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  letter-spacing: -1.1px;
+  position: relative;
+}
+
+.title_hour {
+  color: #3d3d3d;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: right;
+  padding: 0.4rem;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.title_hour--w {
+  color: #fff;
+}
+
+.hour {
+  color: #091f80;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.hour p {
+  line-height: 1.2;
+}
+
+.bg_blue--s {
+  background: #4170df;
+}
+
+.bg_blue--l {
+  background: #4e94d1;
+}
+
+.bg_blue--d {
+  background: #325690;
+}
+
+.bg_green--l {
+  background: #b6efe1;
+}
+
+.bg_green--d {
+  background: #75c7c3;
+}
+
+.bg_green--s {
+  background: #cef8f0;
+}
+
+/*ESTILOS FEDE*/
+.acorh {
+  margin: 10px auto;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.acorh .accordion-section a img {
+  display: block;
+  border-radius: 50%;
+  width: 50%;
+}
+
+.acorh .accordion-section a h3 {
+  color: #325690;
+  font-size: 2.3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.acorh {
+  margin: 10px auto;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  font-size: 18px;
+}
+
+.acorh .accordion-section {
+  list-style: none;
+}
+
+.acorh .accordion-section a p {
+  color: #325690;
+  text-align: center;
+}
+
+.cargo {
+  color: #325690;
+  text-align: center;
+}
+
+.accordion-section-content {
+  display: none;
+}
+
+.carousel_sponsor .owl-theme .owl-dot.active span {
+  background: #0062ff;
+}
+
+.carousel_sponsor .owl-theme .owl-dot span {
+  background: #75c7c3;
+}
+
+.carousel_sponsor .owl-theme .owl-nav {
+  position: absolute;
+  top: 50%;
+  margin: auto;
+  -webkit-transform: translate(0, -2rem);
+      -ms-transform: translate(0, -2rem);
+          transform: translate(0, -2rem);
+  width: 100%;
+}
+
+.carousel_sponsor .owl-theme .owl-prev, .carousel_sponsor .owl-theme .owl-next {
+  position: absolute;
+  background: #0062ff !important;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.carousel_sponsor .owl-theme .owl-prev span, .carousel_sponsor .owl-theme .owl-next span {
+  color: #fff;
+  line-height: 1;
+  display: block;
+}
+
+.carousel_sponsor .owl-theme .owl-prev {
+  left: 0;
+}
+
+.carousel_sponsor .owl-theme .owl-next {
+  right: 0;
+}
+
+/*# sourceMappingURL=maps/main.css.map */
