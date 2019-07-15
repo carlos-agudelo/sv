@@ -1,0 +1,29 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/a-variables',
+  'abstracts/a-mixins',
+  'abstracts/a-functions';
+
+// 2. Vendors
+@import
+  //'../bootstrap/assets/stylesheets/bootstrap',
+  //'vendor/normalize';
+
+// 3. Base
+@import
+  'base/b-typography';
+
+// 4. Layouts
+@import
+  'layout/l-header',
+  'layout/l-footer';
+
+// 5. Components
+@import
+  //'components/';
+
+// 6. Page-specific styles
+//@import
+  //'pages/home';
