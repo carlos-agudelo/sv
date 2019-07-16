@@ -24,71 +24,6 @@ const path_dest = {
     css: 'css'
 };
 
-function concat_files(srcObj, nameFile, cb){
-    pump([
-        gulp.src(srcObj),
-        concat(nameFile),
-        uglify(),
-        gulp.dest(path_dest.js)
-    ],
-        cb
-    );
-}
-
-//Sass
-gulp.task('sass', () => {
-    gulp.src('scss/*.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass({
-            outputStyle: 'expanded'
-        }).on('error', sass.logError))
-        .pipe(autoprefixer({
-            browsers: ['last 5 versions']
-        }))
-        .pipe(sourcemaps.write('maps'))
-        .pipe(gulp.dest(path_dest.css));
-});
-
-//Js compress
-// gulp.task('js_task', (cb) => {
-//     pump([
-//         gulp.src('app/js/src/*.js').pipe(babel({
-//             presets: ['env']
-//         })),
-//         uglify(),
-//         gulp.dest(path_dest.js)
-//     ],
-//         cb
-//     );
-// });
-
-//Css vendors
-// gulp.task('css_vendor', () => {
-//     gulp.src(path.css)
-//         .pipe(concat('vendor.min.css'))
-//         .pipe(minifyCSS())
-//         .pipe(gulp.dest(path_dest.css));
-// });
-
-//Js vendors
-// gulp.task('js_vendor', (cb) => {
-//     pump([
-//         gulp.src(path.js),
-//         concat('vendor.min.js'),
-//         uglify(),
-//         gulp.dest(path_dest.js)
-//     ],
-//         cb
-//     );
-// });
-
-//Babel
-// gulp.task('babel_task', () => {
-//     gulp.src('app/js/src/*.js')
-        
-//         .pipe(gulp.dest(path_dest.js))    
-// });
-
 //Server
 gulp.task('server', () => {
     gulp.src('./')
@@ -99,11 +34,28 @@ gulp.task('server', () => {
         }));
 });
 
-//Default
-gulp.task('default', ["server"], () => {
-    gulp.watch('scss/*.scss', ['sass']);
-    // gulp.watch('app/css/vendors/*.css', ['css_vendor']);
-    //gulp.watch('app/js/src/*.js', ['babel_task']);
-    // gulp.watch('js/*.js', ['js_task']);
-    // gulp.watch('app/js/vendors/*.js', ['js_vendor']);
-});
+//Sass
+function css() {
+  return gulp
+        .src('scss/**/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'expanded'
+        }).on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['last 5 versions']
+        }))
+        .pipe(sourcemaps.write('maps'))
+        .pipe(gulp.dest(path_dest.css));
+};
+
+// Watch files
+function watch() {
+  gulp.watch("scss/**/*.scss", css);
+}
+
+var build = gulp.parallel('server', css, watch);
+
+gulp.task(build);
+
+gulp.task('default', build);
