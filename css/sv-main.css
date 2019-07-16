@@ -1,3 +1,70 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900&display=swap");
+.font-black {
+  font-weight: 900;
+}
+
+.bg-color-primary {
+  background-color: #97BF0D;
+}
+
+.bg-color-secondary {
+  background-color: #006941;
+}
+
+.bg-color-purple {
+  background-color: #962582;
+}
+
+.p-relative {
+  position: relative;
+}
+
+/* Override bootstrap */
+@media (min-width: 1310px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+.c-brand-menu__brand {
+  max-width: 411px;
+  width: 100%;
+}
+
+.c-brand-menu__container {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.c-main-menu__container .container {
+  position: relative;
+  z-index: 1;
+}
+
+.c-main-menu__container::after {
+  width: 50%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #962582;
+}
+
+.c-main-menu .nav-link {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 22px;
+  padding: 20px 10px;
+}
+
+.c-main-menu > .nav-item:last-child {
+  margin-right: -1px;
+}
+
+.c-main-menu > .nav-item:last-child .nav-link {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 /*# sourceMappingURL=maps/sv-main.css.map */
