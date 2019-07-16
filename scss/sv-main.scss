@@ -1,10 +1,17 @@
 @charset 'UTF-8';
 
-// 1. Configuration and helpers
+
+
+// 0. Configuration and helpers
 @import
   'abstracts/a-variables',
   'abstracts/a-mixins',
-  'abstracts/a-functions';
+  'abstracts/a-functions',
+  'abstracts/a-helpers';
+
+// 1. Theme
+@import
+  'themes/t-theme';
 
 // 2. Vendors
 //@import
@@ -21,8 +28,10 @@
   'layout/l-footer';
 
 // 5. Components
-//@import
-  //'components/';
+@import
+  'components/c-brand-menu',
+  'components/c-main-menu'
+  'components/c-carousel-vh';
 
 // 6. Page-specific styles
 //@import

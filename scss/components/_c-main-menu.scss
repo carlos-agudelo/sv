@@ -1,0 +1,32 @@
+
+// Main menu
+
+.c-main-menu {
+	&__container {
+		.container {
+			position: relative;
+			z-index: 1;
+		}		
+		&::after {
+			width: 50%;
+			height: 100%;
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: $color-purple;
+		}
+	}
+	.nav-link {
+		color: $color-white;
+		@include font-size(20px, 22px);
+		padding: 20px 10px;
+	}
+	& > .nav-item:last-child {
+		margin-right: -1px;
+		.nav-link {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}

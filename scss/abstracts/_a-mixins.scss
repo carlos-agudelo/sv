@@ -20,9 +20,7 @@
 
 // Font
 
-@mixin font ($font, $size, $line-height, $weight) {
-    font-family: $font;
+@mixin font-size ($size, $line-height) {
     font-size: $size;    
-    line-height: $line-height;    
-    font-weight: $weight;
+    line-height: $line-height;
 }

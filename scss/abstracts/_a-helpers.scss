@@ -1,0 +1,24 @@
+
+// Font weight
+
+.font-black {
+	font-weight: 900;
+}
+
+// Bg colors
+
+.bg-color-primary {
+	background-color: $color-primary;
+}
+.bg-color-secondary {
+	background-color: $color-secondary;
+}
+.bg-color-purple {
+	background-color: $color-purple;
+}
+
+// Positions
+
+.p-relative {
+	position: relative;
+}
