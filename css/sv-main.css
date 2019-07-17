@@ -24,6 +24,11 @@
 }
 
 body {
+<<<<<<< HEAD
+=======
+  font-size: 14px;
+  color: #676B6D;
+>>>>>>> 280aefeac87cc09f9471c67e36b1dd44912edbb0
   font-family: "Roboto", sans-serif;
 }
 
@@ -57,6 +62,7 @@ body {
   }
 }
 
+<<<<<<< HEAD
 .c-top-menu .nav-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -70,6 +76,14 @@ body {
   padding-left: 5px;
   padding-right: 5px;
   color: #ffffff;
+=======
+/* Override btns */
+.btn {
+  font-size: 17px;
+  border-radius: 0;
+  padding: 5px 30px;
+  font-weight: 500;
+>>>>>>> 280aefeac87cc09f9471c67e36b1dd44912edbb0
 }
 
 .c-brand-menu__brand {
@@ -145,6 +159,7 @@ body {
   padding-right: 15px;
 }
 
+<<<<<<< HEAD
 .c-icon-menu {
   padding: 12px 0;
 }
@@ -224,6 +239,89 @@ body {
 .c-carousel-vh .carousel-inner,
 .c-carousel-vh .carousel-item {
   height: 100%;
+=======
+.bar_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 3%;
+  padding-right: 12%;
+}
+
+.bar_title--sec {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.bar_icon {
+  padding-right: 10px;
+}
+
+.bar_link {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.new {
+  position: relative;
+}
+
+.new_info {
+  padding-right: 118px;
+}
+
+.new_info--w {
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.new_title {
+  color: #006941;
+  font-size: 18px;
+}
+
+.new_date {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  padding: 10px 32px;
+}
+
+.new_btn {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+}
+
+.new p {
+  line-height: 1.2;
+}
+
+.education_title {
+  color: #006941;
+  font-size: 26px;
+  line-height: 0.9;
+}
+
+.education_title--sub {
+  font-size: 20px;
+}
+
+.education_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+>>>>>>> 280aefeac87cc09f9471c67e36b1dd44912edbb0
 }
 
 /*# sourceMappingURL=maps/sv-main.css.map */

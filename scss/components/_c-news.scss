@@ -1,0 +1,29 @@
+.new{
+    position: relative;
+    &_info{
+        padding-right: 118px;
+        &--w{
+            position:absolute;
+            bottom: 0;
+            background: rgba($color-white, 0.9);
+        }
+    }
+    &_title{
+        color: $color-secondary;
+        font-size: 18px;
+    }
+    &_date{
+        position: absolute;
+        right: 0;
+        bottom: 100%;
+        padding: 10px 32px;
+    }
+    &_btn{
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+    }
+    p{
+        line-height: 1.2;
+    }
+}
