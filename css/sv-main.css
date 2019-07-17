@@ -149,6 +149,26 @@ body {
   }
 }
 
+footer .nav-bar {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+footer .nav-link {
+  line-height: 18px;
+  font-size: 16px;
+  color: #676B6D;
+}
+
+footer .link-title {
+  display: block;
+  padding-bottom: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  color: #006941;
+}
+
 .c-top-menu {
   padding: 8px 0;
 }
