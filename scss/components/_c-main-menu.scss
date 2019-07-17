@@ -2,11 +2,9 @@
 // Main menu
 
 .c-main-menu {
+	position: relative;
+	z-index: 30;	
 	&__container {
-		.container {
-			position: relative;
-			z-index: 1;
-		}		
 		&::after {
 			width: 50%;
 			height: 100%;
@@ -20,13 +18,69 @@
 	.nav-link {
 		color: $color-white;
 		@include font-size(20px, 22px);
-		padding: 20px 10px;
+		padding: 0;		
 	}
 	& > .nav-item:last-child {
 		margin-right: -1px;
 		.nav-link {
-			padding-left: 15px;
+			padding-left: 18px;
 			padding-right: 15px;
+		}
+	}
+	&__sub-contanier {
+		width: 100%;
+		position: fixed;		
+		top: 230px;
+		left: 0;
+		background-color: $color-white;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000);		
+	}
+	.nav-item {
+    	padding: 22px 10px 16px;
+    	&:hover {
+    		.c-main-menu__sub-contanier {
+    			top: 239px;
+    			opacity: 1;
+    			visibility: visible;
+				transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);    			
+    		}
+    	}
+	}	
+	&__sub {
+		list-style-type: none;
+		display: flex;
+		padding: 50px 25px 30px;		
+		& > li {
+			padding: 0 5px;
+			flex-grow: 1;
+			flex-basis: 0;
+		}
+	}
+	&__sub-parent {
+		display: block;
+		padding-bottom: 15px;
+		line-height: 20px;
+		font-size: 18px;
+		font-weight: 700;
+		color: $color-secondary;
+	    @include on-event {
+			color: $color-secondary;	    	
+	    	text-decoration: none;
+	    }
+	}
+	&__sub-child {
+		list-style-type: none;
+		padding-left: 0;
+		a {
+			display: block;
+			padding-bottom: 5px;		
+			color: $color-txt;
+		    @include on-event {
+				color: $color-secondary;	    			    	
+		    	//text-decoration: none;
+		    }
 		}
 	}
 }

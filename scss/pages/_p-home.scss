@@ -1,0 +1,39 @@
+
+// -- Carousel-home -- //
+
+.c-carousel-vh {
+	height: calc(100Vh - 282px);
+}
+
+// -- Sticky btns home -- //
+
+.section-btns {
+	position: absolute;
+	top: 20px;
+    right: 50%;
+    transform: translateX(535px);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    .btn-ico {
+    	margin-bottom: 20px;
+    }   
+}
+
+@media(min-width: 1440px) {
+	.section-btns {
+		top: 30px;
+	}
+    .btn-ico {
+    	margin-bottom: 30px;
+    }   	
+}
+
+.btn-contact {
+	position: fixed;
+	bottom: 50px;
+    right: 50%;
+    z-index: 20;
+    transform: translateX(535px);	
+}

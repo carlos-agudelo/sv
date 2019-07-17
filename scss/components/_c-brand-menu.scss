@@ -20,15 +20,20 @@
 	}
 	.nav-link__ico {
 		position: relative;
-		padding: 5px 45px 5px 15px;
+		padding: 5px 40px 5px 20px;
 		text-align: right;
 		img {
-			max-width: 35px;
+			max-width: 28px;
 			width: 100%;
 			position: absolute;
 			right: 0;
 			top: 50%;
 			transform: translateY(-50%);
+		}
+		&:hover {
+			img {
+				filter: invert(51%) sepia(10%) saturate(3816%) hue-rotate(115deg) brightness(90%) contrast(101%);
+			}
 		}
 	}		
 }

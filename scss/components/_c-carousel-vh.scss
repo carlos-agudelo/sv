@@ -12,4 +12,54 @@
 	.carousel-item {
 		height: 100%;
 	}
+	.arrow-btn {
+		width: 32px;
+		height: 32px;
+		img {
+			width: 10px;
+			height: auto;
+    		filter: invert(1);			
+		}
+		&.arrow-btn__left {
+			img {
+				transform: scale(-1)
+			}
+		}
+	}
+	.carousel-control-prev, 
+	.carousel-control-next {
+		opacity: 1;
+	}
+	.carousel-caption {
+		bottom: auto;
+		left: auto;
+		right: 50%;
+		top: 50%;
+		transform: translate(410px, -50%);
+		h1 {
+			max-width: 585px;
+			width: 100%;
+			@include font-size(70px, 76px);
+			font-weight: 700;
+			span {
+				display: block;
+				font-weight: 400;
+				@include font-size(69px, 72px);
+			}
+			@media(min-width: 1440px) {
+				@include font-size(96px, 96px);
+				span {
+					@include font-size(95px, 97px);		
+				}
+			}
+		}
+		&__desc {
+			float: right;
+			max-width: 488px;
+			width: 100%;
+			line-height: 23px;
+			font-size: 21px;
+			font-weight: 300;
+		}
+	}
 }
