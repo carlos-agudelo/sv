@@ -1,7 +1,5 @@
 @charset 'UTF-8';
 
-
-
 // 0. Configuration and helpers
 @import
   'abstracts/a-variables',
@@ -43,5 +41,5 @@
   'components/c-event';
 
 // 6. Page-specific styles
-//@import
-  //'pages/home';
+@import
+  'pages/p-home';

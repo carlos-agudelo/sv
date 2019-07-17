@@ -29,8 +29,76 @@
 	background-color:$color-lightblue;
 }
 
-// Positions
+// Elements
 
-.p-relative {
-	position: relative;
+// -- Btn ico -- //
+
+.btn-ico {
+	display: flex;
+    flex-wrap: wrap;
+	width: 28px;
+	height: 28px;
+	background-color: $color-secondary;
+	border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px $color-secondary;
+    &__sm {
+    	width: 30px;
+    	height: 30px;
+    }
+    &__md {
+    	width: 40px;
+    	height: 40px;
+    } 
+    &__xl {
+    	width: 54px;
+    	height: 54px;
+    }
+    &__xxl {
+        width: 90px;
+        height: 90px;       
+    }    
+    @include on-event {
+        background-color: $color-primary;
+        border-color: $color-secondary;
+    }
+    &__primary {
+    	background-color: $color-primary;
+		border: solid 1px $color-primary;    	
+	    @include on-event {
+	        background-color: $color-secondary;
+	        border-color: $color-primary;
+	    }		
+    }
+    &__caption {
+        width: 100%;
+        padding-top: 5px;
+        display: inline-block;
+        font-weight: 500;
+        @include font-size(12px, 14px);        
+        text-align: center;
+        color: $color-white;     
+    }
+    @include on-event {
+        text-decoration: none;
+    }       
 }
+
+// -- btn-donation -- //
+
+.btn-dona {
+    img {
+        position: relative;
+        top: -4px;
+        padding-right: 3px;       
+        transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    }
+    &:hover {
+        img {
+            transform: scale(1.2);
+            transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+        }
+    }
+}
+

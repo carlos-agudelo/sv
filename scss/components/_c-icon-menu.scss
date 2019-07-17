@@ -2,7 +2,9 @@
 // Icon menu
 
 .c-icon-menu {
-    padding: 12px 0;	
+	position: relative;
+    padding: 0;	
+    z-index: 21;
 	.nav-item {
 		position: relative;
 		flex-grow: 1;
@@ -13,10 +15,12 @@
 		}
 	}
 	.nav-link {
-		padding-top: 0;
-		padding-bottom: 0;
+		position: relative;
+		padding: 12px 16px;
 		color: $color-white;
-		@include font-size(18px, 20px);		
+		@include font-size(18px, 20px);
+		background-color: $color-primary;
+		z-index: 16;		
 	}
 	&__sub {
 		width: 100%;
@@ -24,15 +28,33 @@
 		padding: 0;
 		position: absolute;
 		left: 0;
-		bottom: 32px;
+		bottom: 0;
+		opacity: 0;
+		visibility: hidden;
     	z-index: 15;		
 		background-color: rgba(0,105,65,0.9);
 		border-radius: 0 53px 0 0;
+		transition: all 400ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
+	}
+	.nav-item:hover{ 
+		.c-icon-menu__sub {
+			bottom: 100%;
+			opacity: 1;
+			visibility: visible;		
+			transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+		}
 	}
 	&__sub-link {
 		display: block;
-		padding: 22px 40px 12px 35px;
-	}	
+		padding: 30px 40px 12px 35px;
+	}
+	&__sub-ico {
+		width: 100%;
+		min-height: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 	&__sub-desc {
 		position: relative;
 		margin-top: 10px;
