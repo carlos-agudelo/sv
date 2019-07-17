@@ -2,5 +2,14 @@
 // Carousel 100vh
 
 .c-carousel-vh {
-	
+	height: 100Vh;
+	.carousel-item {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	.carousel-inner,
+	.carousel-item {
+		height: 100%;
+	}
 }

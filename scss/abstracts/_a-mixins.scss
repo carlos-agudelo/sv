@@ -6,13 +6,17 @@
         &,
         &:hover,
         &:active,
-        &:focus {
+        &:focus,
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active {
             @content;
         }
     } @else {
         &:hover,
         &:active,
-        &:focus {
+        &:focus,
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active {
             @content;
         }
     }

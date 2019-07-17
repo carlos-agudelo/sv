@@ -1,0 +1,54 @@
+
+// Icon menu
+
+.c-icon-menu {
+    padding: 12px 0;	
+	.nav-item {
+		position: relative;
+		flex-grow: 1;
+		flex-basis: 0;		
+		text-align: center;
+		& +  .nav-item {
+			border-left: solid 1px $color-white;
+		}
+	}
+	.nav-link {
+		padding-top: 0;
+		padding-bottom: 0;
+		color: $color-white;
+		@include font-size(18px, 20px);		
+	}
+	&__sub {
+		width: 100%;
+		list-style-type: none;
+		padding: 0;
+		position: absolute;
+		left: 0;
+		bottom: 32px;
+    	z-index: 15;		
+		background-color: rgba(0,105,65,0.9);
+		border-radius: 0 53px 0 0;
+	}
+	&__sub-link {
+		display: block;
+		padding: 22px 40px 12px 35px;
+	}	
+	&__sub-desc {
+		position: relative;
+		margin-top: 10px;
+		display: block;
+		color: $color-white;
+		@include font-size(12px, 14px);
+		&::after {
+			width: 14px;
+			height: 24px;
+			content: "";
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: -20px;
+			transform: translateY(-50%);
+			background: transparent url(../img/ico-arrow.png) no-repeat center;
+		}
+	}
+}

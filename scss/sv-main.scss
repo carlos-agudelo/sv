@@ -29,8 +29,10 @@
 
 // 5. Components
 @import
+  'components/c-top-menu',
   'components/c-brand-menu',
-  'components/c-main-menu'
+  'components/c-main-menu',
+  'components/c-icon-menu',  
   'components/c-carousel-vh';
 
 // 6. Page-specific styles
