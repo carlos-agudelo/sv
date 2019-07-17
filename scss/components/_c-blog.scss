@@ -1,0 +1,20 @@
+.blog{
+    &_title{
+        font-size: 18px;
+        max-width: 84%;
+    }
+    &_content{
+        display: flex;
+    }
+    &_info{
+        position: relative;
+    }
+    &_btn{
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+    }
+    p{
+        padding: 8px 18px 0 10px;
+    }
+}

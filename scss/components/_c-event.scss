@@ -1,0 +1,19 @@
+.event{
+    &_item{
+        background: #EDEDED;
+        display: flex;
+        align-items: center;
+    }
+    &_col{
+        width: 50%;
+    }
+    &_title{
+        font-size: 18px;
+    }
+    &_date{
+        color: $color-secondary;
+    }
+    &_info{
+        text-align: right;
+    }
+}

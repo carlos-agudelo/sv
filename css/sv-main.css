@@ -19,6 +19,14 @@
   background-color: #962582;
 }
 
+.bg-color-orange {
+  background-color: #EC7D22;
+}
+
+.bg-color-lightblue {
+  background-color: #009F98;
+}
+
 .p-relative {
   position: relative;
 }
@@ -317,6 +325,80 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.donate_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.donate_title {
+  font-size: 59px;
+}
+
+.donate_title--sub {
+  width: 100%;
+  font-size: 28px;
+}
+
+.blog_title {
+  font-size: 18px;
+  max-width: 84%;
+}
+
+.blog_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blog_info {
+  position: relative;
+}
+
+.blog_btn {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+
+.blog p {
+  padding: 8px 18px 0 10px;
+}
+
+.event_item {
+  background: #EDEDED;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.event_col {
+  width: 50%;
+}
+
+.event_title {
+  font-size: 18px;
+}
+
+.event_date {
+  color: #006941;
+}
+
+.event_info {
+  text-align: right;
 }
 
 /*# sourceMappingURL=maps/sv-main.css.map */
