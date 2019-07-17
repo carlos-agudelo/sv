@@ -24,17 +24,17 @@
 }
 
 body {
-<<<<<<< HEAD
-=======
   font-size: 14px;
   color: #676B6D;
->>>>>>> 280aefeac87cc09f9471c67e36b1dd44912edbb0
   font-family: "Roboto", sans-serif;
 }
 
 /* Override bootstrap */
 .btn {
-  border-radius: 20px;
+  font-size: 17px;
+  border-radius: 0;
+  padding: 5px 30px;
+  font-weight: 500;
 }
 
 .btn-secondary {
@@ -47,6 +47,10 @@ body {
   color: #ffffff;
   background-color: #97BF0D;
   border-color: #006941;
+}
+
+.btn-radius {
+  border-radius: 20px;
 }
 
 .btn-group-sm > .btn,
@@ -62,7 +66,7 @@ body {
   }
 }
 
-<<<<<<< HEAD
+/* Override btns */
 .c-top-menu .nav-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,14 +80,6 @@ body {
   padding-left: 5px;
   padding-right: 5px;
   color: #ffffff;
-=======
-/* Override btns */
-.btn {
-  font-size: 17px;
-  border-radius: 0;
-  padding: 5px 30px;
-  font-weight: 500;
->>>>>>> 280aefeac87cc09f9471c67e36b1dd44912edbb0
 }
 
 .c-brand-menu__brand {
@@ -159,7 +155,6 @@ body {
   padding-right: 15px;
 }
 
-<<<<<<< HEAD
 .c-icon-menu {
   padding: 12px 0;
 }
@@ -239,7 +234,8 @@ body {
 .c-carousel-vh .carousel-inner,
 .c-carousel-vh .carousel-item {
   height: 100%;
-=======
+}
+
 .bar_title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -321,7 +317,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
->>>>>>> 280aefeac87cc09f9471c67e36b1dd44912edbb0
 }
 
 /*# sourceMappingURL=maps/sv-main.css.map */
