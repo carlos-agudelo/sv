@@ -3,6 +3,14 @@
         background: #EDEDED;
         display: flex;
         align-items: center;
+        border-bottom: 1px solid $color-secondary;
+        &:last-child{
+            border-bottom: 0;
+        }
+        p{
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
     }
     &_col{
         width: 50%;
@@ -12,8 +20,22 @@
     }
     &_date{
         color: $color-secondary;
+        font-weight: 900;
     }
     &_info{
         text-align: right;
+        padding: 0px 11.5px;
+    }
+    &_hour{
+        font-style: italic;
+    }
+    &_location{
+        color: $color-secondary;
+        span{
+            font-weight: 900;
+        }
+    }
+    &_image{
+        box-shadow: 1px 1px 6px 2px rgba(255, 255, 255, 0.16);
     }
 }

@@ -9,6 +9,27 @@
 	font-weight: 700;
 }
 
+// Font colors
+
+.color-primary {
+    color: $color-primary;
+}
+.color-secondary {
+    color: $color-secondary;
+}
+.color-purple {
+    color: $color-purple;
+}
+.color-orange {
+    color: $color-orange;
+}
+.color-lightblue {
+    color:$color-lightblue;
+}
+.color-white {
+    color:$color-white;
+}
+
 // Bg colors
 
 .bg-color-primary {
@@ -20,12 +41,10 @@
 .bg-color-purple {
 	background-color: $color-purple;
 }
-
 .bg-color-orange {
 	background-color: $color-orange;
 }
-
-.bg-color-lightblue{
+.bg-color-lightblue {
 	background-color:$color-lightblue;
 }
 
@@ -84,8 +103,6 @@
         text-decoration: none;
     }       
 }
-
-// -- btn-donation -- //
 
 .btn-dona {
     img {

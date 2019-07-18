@@ -34,6 +34,10 @@
 	position: fixed;
 	bottom: 50px;
     right: 50%;
-    z-index: 20;
+    z-index: 22;
     transform: translateX(535px);	
+    &.hover {
+        z-index: 20;
+    }
 }
+
