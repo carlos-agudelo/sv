@@ -20,3 +20,11 @@ $( ".c-icon-menu" ).hover(
 	    $( ".btn-contact" ).removeClass( "hover" );
 	  }
 );
+
+$(".attention_adult .attention_info").hover(function(){
+	$(".attention_adult").toggleClass("attention_active");
+});
+
+$(".attention_child .attention_info").hover(function(){
+	$(".attention_child").toggleClass("attention_active");
+});

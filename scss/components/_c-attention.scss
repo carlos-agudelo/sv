@@ -1,9 +1,31 @@
 .attention{
+    display: flex;
+    min-height: 164px;
+    max-height: 164px;
+    &_coll{
+        width: 22%;
+        position: relative;
+        transition: all 0.3s ease-out;
+    }
+    &_image{
+        width: 78%;
+        position: relative;
+        z-index: 10;
+        transition: all 0.3s ease-out;
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
     &_info{
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
     }
     &_title{
         font-weight: 300;
@@ -15,6 +37,10 @@
         padding: 0;
         display: flex;
         align-items: center;
+        position: absolute;
+        width: 0;
+        opacity: 0;
+        transition: all 0.2s ease-out;
         &--item{
             margin: 0 0px;
             position: relative;
@@ -47,5 +73,19 @@
                 }
             }
         }
+    }
+}
+
+.attention_active{
+    .attention_coll{
+        width: 70%;
+    }
+    .attention_list{
+        position: relative;
+        width: auto;
+        opacity: 1;
+    }
+    .attention_image{
+        width: 30%;
     }
 }
