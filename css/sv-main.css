@@ -858,6 +858,37 @@ body {
   padding: 8px 18px 0 10px;
 }
 
+.c-search {
+  position: absolute;
+  right: 120px;
+  top: 60px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.c-search .form-control {
+  border-color: #006941;
+}
+
+.c-search .form-control:focus {
+  outline: none;
+  border-color: #006941;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.c-search.active-search {
+  top: 44px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+       -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+          transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
 .event_item {
   background: #EDEDED;
   display: -webkit-box;
