@@ -12,6 +12,12 @@
     }
     &_icon{
         padding-right: 10px;
+        &--link{
+            width: 22px;
+            display: inline-block;
+            margin-left: 20px;
+            line-height: 1;
+        }
     }
     &_link{
         font-size: 17px;

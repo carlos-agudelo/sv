@@ -1,5 +1,51 @@
 .attention{
     &_info{
-        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    &_title{
+        font-weight: 300;
+        line-height: 1;
+        margin: 0;
+    }
+    &_list{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        &--item{
+            margin: 0 0px;
+            position: relative;
+            padding: 0 40px;
+            list-style: none;
+            &:after{
+                content:"";
+                height: 100%;
+                width: 2px;
+                background:$color-white;
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: rotate(12deg);
+            }
+            &:last-child{
+                &:after{
+                    display: none;
+                }
+            }
+            a{
+                color: $color-white;
+                font-size: 18px;
+                font-weight: 700;
+                text-decoration: none;
+                img{
+                    margin-bottom: 10px;
+                    width: 50px;
+                    height: 52px;
+                }
+            }
+        }
     }
 }
