@@ -19,7 +19,6 @@
   background-color: #962582;
 }
 
-<<<<<<< HEAD
 .bg-color-orange {
   background-color: #EC7D22;
 }
@@ -28,8 +27,6 @@
   background-color: #009F98;
 }
 
-=======
->>>>>>> 885c5be549816fabaabd02f77494de646f73b6d9
 .btn-ico {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -617,7 +614,6 @@ footer .link-title {
           align-items: center;
 }
 
-<<<<<<< HEAD
 .donate_info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -692,8 +688,6 @@ footer .link-title {
   text-align: right;
 }
 
-=======
->>>>>>> 885c5be549816fabaabd02f77494de646f73b6d9
 .c-carousel-vh {
   height: calc(100Vh - 282px);
 }
