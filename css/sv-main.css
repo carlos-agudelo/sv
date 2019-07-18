@@ -955,10 +955,14 @@ body {
   position: fixed;
   bottom: 50px;
   right: 50%;
-  z-index: 20;
+  z-index: 22;
   -webkit-transform: translateX(535px);
       -ms-transform: translateX(535px);
           transform: translateX(535px);
+}
+
+.btn-contact.hover {
+  z-index: 20;
 }
 
 /*# sourceMappingURL=maps/sv-main.css.map */
