@@ -31,6 +31,18 @@ body {
     }
 }
 
+.btn-primary {
+	min-height: 41px;
+    color: $color-white;
+    background-color: $color-primary;
+    border-color: $color-primary;
+    @include on-event {
+        color: $color-white;
+        background-color: $color-secondary;
+        border-color: $color-primary;
+    }
+}
+
 .btn-secondary {
     color: $color-white;
     background-color: $color-secondary;
